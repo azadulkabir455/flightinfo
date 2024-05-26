@@ -8,6 +8,7 @@
 
     .details {
         align-items: center;
+
         span.process {
             display: inline-block;
             width: 24px;
@@ -17,15 +18,20 @@
             background-color: $primaryColor;
             @include paragraphTwo;
             font-weight: 600;
+            line-height: 25px;
             color: $whiteColor;
             text-align: center
         }
+
         .placeTimeInfo {
             h2 {
                 @include headingOne;
                 margin-bottom: 2px;
+
                 span {
                     padding: 0 8px;
+                    position: relative;
+                    top: -2px;
                 }
             }
 
@@ -55,6 +61,7 @@
             }
         }
     }
+
     .hour {
         display: inline-block;
         padding: 4px 8px;
@@ -63,12 +70,14 @@
         @include metaText;
         color: $primaryColor;
     }
+
     @media only screen and (max-width: 670px) {
         .details {
             margin-top: 8px;
         }
+
         .hour {
-            margin-top: 12px;   
+            margin-top: 12px;
         }
     }
 }
