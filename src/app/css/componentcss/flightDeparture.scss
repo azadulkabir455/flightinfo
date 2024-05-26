@@ -1,0 +1,46 @@
+@import "../globals.scss";
+
+.flightDeparture {
+    align-items: center;
+    padding: 16px 16px 0;
+
+    .icon {
+        padding: 10px 9px 6px;
+        margin-right: 8px;
+    }
+    .flightDepartureInfo {
+        padding: 10px 16px 12px;
+        border-radius: 6px;
+        background-color: #F5F7FA;
+        margin: 4px 0;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        &.deepColor {
+            background-color: #E8F3FF;
+            ;
+        }
+        .countryName {
+            p {
+                @include paragraphOne;
+                font-weight: 500;
+                color: $secondaryColor;
+            }
+        }
+        .terminal {
+            p {
+                @include paragraphOne;
+                span {
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 670px) {
+        .terminal {
+            p {
+                margin-top: 8px;
+            }
+        }
+    }
+}

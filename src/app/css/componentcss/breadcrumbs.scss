@@ -1,0 +1,35 @@
+@import "../globals.scss";
+
+ul.breadCrumbs {
+    list-style-type: none;
+    padding: none;
+    margin: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+
+    li {
+        @include paragraphOne;
+        position: relative;
+        margin-right: 26px;
+        cursor: pointer;
+        transition: all .2s linear;
+
+        &:hover,
+        &:last-child {
+            color: $primaryColor;
+        }
+        &:not(:last-child)::before {
+            content: "";
+            background-image: url(/icons/rightCherevon.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 8px;
+            width: 5px;
+            position: absolute;
+            top: 5px;
+            right: -15px;
+        }
+
+    }
+}

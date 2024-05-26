@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Murecho:wght@100..900&display=swap');
+
+$primaryColor: #1882FF;
+$secondaryColor: #1A2B3D;
+$whiteColor: #fff;
+$backgroundColor: #EBF0F5;
+$shadowColor: #1A2B3D14;
+$borderColor: #EBF0F5;
+
+$font: "Murecho", sans-serif;
+$paragraphColor: #5A6573;
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: $font;
+  background-color: $backgroundColor;
+}
+
+.flex {
+  display: flex;
+}
+
+.mainContainer {
+  border-radius: 8px;
+  padding-bottom: 16px;
+  background-color: $whiteColor;
+  box-shadow: 0px 2px 8px 0px $shadowColor;
+
+}
+
+@mixin metaText {
+  font-family: $font;
+  font-size: 12px;
+  font-weight: 475;
+  line-height: 16px;
+}
+
+@mixin paragraphOne {
+  font-family: $font;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  color: $paragraphColor;
+}
+
+@mixin paragraphTwo {
+  font-family: $font;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: $paragraphColor;
+}
+
+@mixin headingOne {
+  font-family: $font;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  color: $secondaryColor;
+}
+
+@mixin headingTwo {
+  font-family: $font;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.errorMessage {
+  padding: 9px 12px;
+  border-radius: 6px;
+  background-color: #FFEEDB;
+  border: 1px solid #FFE1C2;
+  display: flex;
+  align-items: center;
+
+  img {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  p {
+    @include metaText;
+    color: #3E4957;
+
+  }
+  @media only screen and (max-width: 670px) {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .flex {
+      display: block;
+  }
+}

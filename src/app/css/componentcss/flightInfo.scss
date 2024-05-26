@@ -1,0 +1,102 @@
+@import "../globals.scss";
+
+.flightInfo {
+    margin: 0 16px;
+    display: flex;
+
+    .sideLine {
+        margin: 0 14px 0 4px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            margin-top: 18px;
+        }
+
+        .line {
+            width: 2px;
+            height: calc(100% - 44px);
+            border-radius: 1px;
+            margin-top: 12px;
+            background-color: #D8E1EB;
+            position: relative;
+
+            &::before {
+                content: "";
+                background-image: url(/icons/plan.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 16px;
+                height: 16px;
+                position: absolute;
+                left: -7px;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 1;
+            }
+
+            &::after {
+                content: "";
+                background-color: #fff;
+                width: 16px;
+                height: 25px;
+                position: absolute;
+                left: -7px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    .infoContainer {
+        width: 100%;
+
+        .timeInfo {
+            margin-top: 12px;
+
+            div {
+                flex-basis: 33.33%;
+
+                h3 {
+                    @include headingTwo;
+                    color: $secondaryColor;
+                    margin-bottom: 2px;
+                }
+
+                p {
+                    @include paragraphTwo;
+                }
+            }
+        }
+
+        .flightDetails {
+            div {
+                flex-basis: 33.33%;
+                margin: 16px 0;
+
+                p {
+                    @include paragraphTwo;
+
+                    span {
+                        font-weight: 500;
+                        text-transform: capitalize;
+                    }
+
+                    &.flightName {
+                        @include paragraphTwo;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 670px) {
+        .timeInfo {
+            div {
+                margin-bottom: 12px;
+            }
+        }
+    }
+}

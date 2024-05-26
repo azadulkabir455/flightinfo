@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "./css/globals.scss";
+import "./css/layout.scss";
+
+// Component CSS
+import "./css/componentcss/breadcrumbs.scss"
+import "./css/componentcss/flightHeader.scss"
+import "./css/componentcss/flightDeparture.scss"
+import "./css/componentcss/flightInfo.scss"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +23,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="topBar"></div>
+        <div className="container">
+          <div className="sideBar"></div>
+          <div className="content">{children}</div>
+        </div>
+      </body>
     </html>
   );
 }
