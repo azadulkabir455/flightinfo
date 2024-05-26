@@ -23,7 +23,7 @@
         .countryName {
             p {
                 @include paragraphOne;
-                font-weight: 500;
+                font-weight: 600;
                 color: $secondaryColor;
             }
         }
@@ -31,7 +31,7 @@
             p {
                 @include paragraphOne;
                 span {
-                    font-weight: 500;
+                    font-weight: 600;
                 }
             }
         }
